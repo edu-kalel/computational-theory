@@ -1,0 +1,11 @@
+G = {t, n, S, P}
+T = {=,+,-,/,%,*,(,),A,...,Z,a,...,z,0,...,9,_}
+N = { E , ID, NUM, RS, OP }	( E - Expresión; ID - Identificador; NUM - Número; RS - Lado derecho de la expresión; OP - OPERADORES )
+S = E
+P = 	{
+	E -> ID = RS ;
+	RS -> ID | NUM | (RS) | RSOPRS
+	OP -> + | - | * | / | %
+	ID -> _ | a | ... | z | A | ... | Z | IDID | IDNUM | IDNUMID
+	NUM -> 0 | ... | 9 | NUMNUM
+	}
